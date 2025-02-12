@@ -1,0 +1,53 @@
+.select-container {
+    position: relative;
+    width: 250px;
+    overflow: visible; // Permite que o dropdown seja exibido
+  }
+  
+  
+  .react-dropdown-select {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  
+    &:hover {
+      border-color: #007bff;
+    }
+  
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+  }
+  
+  .chevron {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    transition: transform 0.3s ease;
+  }
+  
+  .react-dropdown-select.is-open .chevron {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .react-dropdown-select-dropdown {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; // Garante que fique acima de outros elementos
+  }
+  

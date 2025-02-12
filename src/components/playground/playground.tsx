@@ -3,6 +3,7 @@ import { useState } from "react";
 import Alert from "@/components/alert/alert";
 import Button from "@/components/button/button";
 import styles from './Playground.module.scss'
+import Dropdown from "../dropdown/dropdown";
 
 export default function Playground() {
   const [showAlert, setShowAlert] = useState(false);
@@ -36,13 +37,21 @@ export default function Playground() {
         {showAlertSuccess && <Alert message="Há receitas que ferem as restrições desta turma, considere realizar alterações nas receitas em destaque!" type="success" />}
 
         <Button
-        text="Alert de sucesso"
+        text="Alert de info"
         variant="primary"
         onClick={() => setShowAlertInfo(true)}
         />
 
         {showAlertInfo && <Alert message="Há receitas que ferem as restrições desta turma, considere realizar alterações nas receitas em destaque!" type="info" />}
         </div>
+
+        <h3>dropdown</h3>
+
+        {/* <Dropdown/> */}
+        <h3>Datagrid</h3>
+
+        <h3>Modal</h3>
+        
         </div>
       
     </>

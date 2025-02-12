@@ -2,11 +2,11 @@
 
 import styles from "./Button.module.scss";
 
-type ButtonProps = {
+interface ButtonProps {
   text: string;
   variant: "primary" | "secondary";
   onClick: () => void;
-};
+}
 
 export default function Button({ text, variant, onClick }: ButtonProps) {
   return (

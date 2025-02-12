@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import styles from "./Alert.module.scss";
 
-type AlertProps = {
+interface AlertProps {
   message: string;
   type: "success" | "error" | "info";
-};
+}
 
 export default function Alert({ message, type }: AlertProps) {
   const [visible, setVisible] = useState(true);
