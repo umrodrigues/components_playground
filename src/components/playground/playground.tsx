@@ -1,0 +1,50 @@
+'use client'
+import { useState } from "react";
+import Alert from "@/components/alert/alert";
+import Button from "@/components/button/button";
+import styles from './Playground.module.scss'
+
+export default function Playground() {
+  const [showAlert, setShowAlert] = useState(false);
+  const [showAlertSuccess, setShowAlertSucess] = useState(false);
+  const [showAlertInfo, setShowAlertInfo] = useState(false);
+
+  return (
+    <>
+    <div className={styles.playground}>
+      <h2>Playground Components</h2>
+
+
+
+
+      <h3>Alerts</h3>
+        <div className={styles.alerts}>
+      <Button
+        text="Alert de erro"
+        variant="primary"
+        onClick={() => setShowAlert(true)}
+      />
+
+      {showAlert && <Alert message="Operação realizada com sucesso!" type="error" />}
+
+      <Button
+        text="Alert de sucesso"
+        variant="secondary"
+        onClick={() => setShowAlertSucess(true)}
+        />
+
+        {showAlertSuccess && <Alert message="Há receitas que ferem as restrições desta turma, considere realizar alterações nas receitas em destaque!" type="success" />}
+
+        <Button
+        text="Alert de sucesso"
+        variant="primary"
+        onClick={() => setShowAlertInfo(true)}
+        />
+
+        {showAlertInfo && <Alert message="Há receitas que ferem as restrições desta turma, considere realizar alterações nas receitas em destaque!" type="info" />}
+        </div>
+        </div>
+      
+    </>
+  );
+}
