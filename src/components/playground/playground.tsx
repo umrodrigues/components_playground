@@ -4,6 +4,7 @@ import Alert from "@/components/alert/alert";
 import Button from "@/components/button/button";
 import styles from './Playground.module.scss'
 import Datagrid from "../datagrid/datagrid";
+import DataGridTest from "../datagridtest/datagridtest";
 
 export default function Playground() {
   const [showAlert, setShowAlert] = useState(false);
@@ -48,10 +49,17 @@ export default function Playground() {
         <h3>dropdown</h3>
 
         {/* <Dropdown/> */}
-        <h3>Datagrid com mui/x-data-gri</h3>
+
+        <h3>Datagrid test</h3>
+        <DataGridTest/>
+
+
+        <h3>Datagrid com lib mui/x-data-gri</h3>
 
         <Datagrid/>
 
+
+      
 
 
         <h3>Modal</h3>
