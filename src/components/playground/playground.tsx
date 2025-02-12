@@ -3,7 +3,6 @@ import { useState } from "react";
 import Alert from "@/components/alert/alert";
 import Button from "@/components/button/button";
 import styles from './Playground.module.scss'
-import Dropdown from "../dropdown/dropdown";
 
 export default function Playground() {
   const [showAlert, setShowAlert] = useState(false);
