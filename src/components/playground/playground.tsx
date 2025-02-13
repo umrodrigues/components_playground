@@ -5,6 +5,7 @@ import Button from "@/components/button/button";
 import styles from './Playground.module.scss'
 import Datagrid from "../datagrid/datagrid";
 import DataGridTest from "../datagridtest/datagridtest";
+import Dropdown from "../dropdown/dropdown";
 
 export default function Playground() {
   const [showAlert, setShowAlert] = useState(false);
@@ -48,7 +49,7 @@ export default function Playground() {
 
         <h3>dropdown</h3>
 
-        {/* <Dropdown/> */}
+        <Dropdown/>
 
         <h3>Datagrid test</h3>
         <DataGridTest/>

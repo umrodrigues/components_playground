@@ -1,53 +1,60 @@
-.select-container {
-    position: relative;
-    width: 250px;
-    overflow: visible; // Permite que o dropdown seja exibido
-  }
-  
-  
-  .react-dropdown-select {
-    width: 100%;
-    padding: 10px 40px 10px 10px;
-    font-size: 14px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: border-color 0.3s;
-  
-    &:hover {
-      border-color: #007bff;
-    }
-  
-    &:focus {
-      outline: none;
-      border-color: #007bff;
-    }
-  }
-  
-  .chevron {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #555;
-    transition: transform 0.3s ease;
-  }
-  
-  .react-dropdown-select.is-open .chevron {
-    transform: translateY(-50%) rotate(180deg);
-  }
-  
-  .react-dropdown-select-dropdown {
-    position: absolute;
-    width: 100%;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-top: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000; // Garante que fique acima de outros elementos
-  }
-  
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.toggle {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 8px;
+  transition: 0.2s ease-in-out, transform 0.3s ease;
+}
+
+.toggle:hover {
+  background: #f5f5f5;
+}
+
+.chevronUp {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.chevronDown {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.menuWrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out, transform 0.3s ease;
+}
+
+.menu li:hover {
+  background: #f0f0f0;
+}
